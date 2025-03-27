@@ -1,0 +1,1051 @@
+<!DOCTYPE html>  
+<html lang="zh-CN">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>初中HTML学习编辑器</title>
+    <link rel="icon" type="image/png" href="imgs/favicon.png">  
+    <style>  
+    </style>
+    <link rel="stylesheet" href="css/index.css">  
+</head>  
+<body>  
+    <div id="left-sidebar">  
+
+        <div id="page-controls">  
+            <button id="prev-page">上一页</button>  
+            <button id="next-page">下一页</button>  
+        </div> 
+
+
+
+        <div id="lesson-navigation">           
+<!-- 以下可以修改 -->
+
+
+<!-- 第1页，认识网页支架结构 -->
+            <div class="lesson-page active" data-page="1">  
+                <h2>HTML基础介绍</h2>  
+                <p>HTML（HyperText Markup Language 超文本标签语言）是用来描述网页的一种语言。就像网页的骨架和说明书，是专门用来给电脑"读"的搭建手册。</p>  
+                <div class="code-example">  
+                    <pre><code>&lt;!DOCTYPE html&gt;  
+&lt;html&gt;  
+    &lt;head&gt;  
+        &lt;title&gt;我的第一个网页&lt;/title&gt;  
+    &lt;/head&gt;  
+    &lt;body&gt;  
+        &lt;h1&gt;欢迎来到我的网站&lt;/h1&gt;
+        &lt;p&gt;精彩内容 即将上线 敬请期待&lt;/p&gt;  
+    &lt;/body&gt;  
+&lt;/html&gt;
+</code></pre>  
+                    <button class="copy-btn">复制</button>  
+                </div> 
+                <h3>HTML网页结构</h3>  
+                <p>&lt;!DOCTYPE&gt;声明有助于浏览器中正确显示网页。</p>
+                <div style="width:99%;border:1px solid grey;padding:3px;margin:0;background-color:#ddd">&lt;html&gt;
+                    <div style="width:90%;border:1px solid grey;padding:3px;margin:20px">&lt;head&gt;
+                    <div style="width:90%;border:1px solid grey;padding:5px;margin:20px">&lt;title&gt;页面标题&lt;/title&gt;
+                    </div>
+                    &lt;/head&gt;
+                    </div>
+                    <div style="width:90%;border:1px solid grey;padding:3px;margin:20px;background-color:#fff">&lt;body&gt;
+                    <div style="width:90%;border:1px solid grey;padding:5px;margin:20px">&lt;h1&gt;这是一个标题&lt;/h1&gt;</div>
+                    <div style="width:90%;border:1px solid grey;padding:5px;margin:20px">&lt;p&gt;这是一个段落。&lt;/p&gt;</div>
+                    <div style="width:90%;border:1px solid grey;padding:5px;margin:20px">&lt;p&gt;这是另外一个段落。&lt;/p&gt;</div>
+                    &lt;/body&gt;
+                    </div>
+                    &lt;/html&gt;
+                    </div>
+                
+              <p>TIP：打开浏览器的开发者工具一般是F12或者ctrl+shift+i,看看每一个网页是不是都有这些内容</p>  
+            </div>  
+<!-- 第2页，认识标签书写 -->            
+            <div class="lesson-page" data-page="2">  
+                <h2>HTML标签结构</h2>  
+                <p>HTML标签是网页的基本组成单元。每个标签都有特定的含义和作用。</p>  
+                
+                <div class="code-example">  
+                    <pre><code>&lt;h1&gt;修改一级标题&lt;/h1&gt;
+</code></pre>  
+                    <button class="copy-btn">复制</button>  
+                </div>  
+
+                <div class="code-example">  
+                    <pre><code>&lt;h2&gt;修改二级标题&lt;/h2&gt;
+</code></pre>  
+                    <button class="copy-btn">复制</button>  
+                </div> 
+
+                <div class="code-example">  
+                    <pre><code>&lt;p&gt;修改段落文本&lt;/p&gt;
+</code></pre>  
+                    <button class="copy-btn">复制</button>  
+                </div> 
+                
+                <div class="code-example">  
+                    <pre><code>&lt;img src="修改图片路径"/&gt;
+</code></pre>  
+                    <button class="copy-btn">复制</button>  
+                </div> 
+
+                <div class="code-example">  
+                    <pre><code>&lt;a href="修改超链接地址" target="_blank"&gt;超链接文本&lt;/a&gt;
+</code></pre>  
+                    <button class="copy-btn">复制</button>  
+                </div> 
+
+                <h3>常用HTML标签</h3>  
+                <table>
+                    <thead>
+                      <tr >
+                        <th >开始标签</th>
+                        <th >作用</th>
+                        <th >结束标签</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td ><code>&lt;head&gt;</td>
+                        <td >网页信息</td>
+                        <td ><code>&lt;/head&gt;</code></td>
+                      </tr>
+                      <tr>
+                        <td ><code>&lt;title&gt;</code></td>
+                        <td >网页标题</td>
+                        <td ><code>&lt;/title&gt;</code></td>
+                      </tr>
+                      <tr>
+                        <td ><code>&lt;body&gt;</code></td>
+                        <td >网页内容</td>
+                        <td ><code>&lt;/body&gt;</code></td>
+                      </tr>
+                      <tr>
+                        <td ><code>&lt;h1&gt;</code></td>
+                        <td >一级标题</td>
+                        <td ><code>&lt;/h1&gt;</code></td>
+                      </tr>
+                      <tr>
+                        <td ><code>&lt;h2&gt;</code></td>
+                        <td >二级标题</td>
+                        <td ><code>&lt;/h2&gt;</code></td>
+                      </tr>
+                      <tr>
+                        <td ><code>&lt;p&gt;</code></td>
+                        <td >段落文本</td>
+                        <td ><code>&lt;/p&gt;</code></td>
+                      </tr>
+                      <tr>
+                        <td ><code>&lt;img src=""/&gt;</code></td>
+                        <td >图片</td>
+                        <td >无</td>
+                      </tr>
+                      <tr>
+                        <td ><code>&lt;a href=""&gt;</code></td>
+                        <td >超链接</td>
+                        <td ><code>&lt;/a&gt;</code></td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <p>TIP:打开一个网站打开F12看看里面有哪些标签是上面介绍的</p>
+
+            </div> 
+<!-- 第2-2，认识标签书写 -->            
+<div class="lesson-page" data-page="2">  
+    <h2>HTML标签书写分类</h2>  
+    <p>标签按照其书写方式分为单标签和双标签。
+        单标签长这个样子 <标签名字/>是单个单词和/以及一个尖括号组成
+        <br>比如图片标签 &lt;img/&gt;
+        <br>比如换行标签 &lt;br/&gt;
+        <br>比如横线标签 &lt;hr/&gt;
+        <br>
+        双标签由开始标签和结束标签组成。双标签长这个样子 &lt;标签名&gt;内容&lt;/标签名&gt;是由一对单词或简写组成 没有/是开始标签 有/的是结束标签
+        <br>比如段落标签p   &lt;p&gt; 内容 &lt;/p&gt;
+    </p>  
+    <h3>常用的单标签</h3>  
+    <div class="code-example">  
+        <pre><code>横&lt;hr&gt;线
+</code></pre>  
+        <button class="copy-btn">复制</button>  
+    </div>  
+
+    <div class="code-example">  
+        <pre><code>&lt;br/&gt;换行
+</code></pre>  
+        <button class="copy-btn">复制</button>  
+    </div> 
+
+    <div class="code-example">  
+        <pre><code>&lt;img src="修改图片路径"/&gt;
+</code></pre>  
+        <button class="copy-btn">复制</button>  
+    </div> 
+    
+    
+    <h3>常用的双HTML标签</h3>  
+    <div class="code-example">  
+        <pre><code>&lt;a href="修改超链接地址" target="_blank"&gt;超链接文本&lt;/a&gt;
+</code></pre>  
+        <button class="copy-btn">复制</button>  
+    </div> 
+
+    <div class="code-example">  
+        <pre><code>&lt;div&gt;布局&lt;/div&gt;
+</code></pre>  
+        <button class="copy-btn">复制</button>  
+    </div> 
+    <div class="code-example">  
+        <pre><code>&lt;article&gt;布局&lt;/article&gt;
+</code></pre>  
+        <button class="copy-btn">复制</button>  
+    </div> 
+
+
+
+      <p>TIP:打开一个网站打开F12看看里面有哪些标签是单标签，哪些是双标签</p>
+      <p>单双标签，就像人分为男女一样，一开始就指定了，不可以更改的。不能说body标签我写成单标签。&lt;body/&gt;是错误的写法，
+        学习的时候是单以后都是单的写法，学习的时候是双那以后都是双的写法</p>
+      <p>TIP:双标签一定要闭合 虽然标签的容错能力很强，比如有的标签不闭合也会正确显示但是强烈建议大家把标签闭合了，这样是为了方便自己知道标签到哪里结束
+        比如双标签只输入 
+        <br>&lt;h1&gt;内容 <br>&lt;h5&gt;内容  <br>没有闭合的&lt;/h1&gt;  &lt;/h5&gt; 也能正确显示
+      </p>
+      <p>TIP:单标签在html5中可以不闭合 即&lt;img&gt; 和&lt;img/&gt;均可以 
+        <br>
+        但在以前的版本中xhtml中是强制要求有一个/来闭合的，即img标签必须写成&lt;img/&gt; 这在看以前网页代码的时候需要注意
+      </p>
+
+</div>  
+
+<!-- 第2-3，认识标签书写 -->            
+<div class="lesson-page" data-page="2">  
+    <h2>HTML标签书写分类</h2>  
+    <h2>标签嵌套</h2>
+<p>单标签不能再包含其他标签，只能被双标签包裹</p>
+<p>双标签可以包含其他标签，也可以被其他双标签包裹</p>
+<p>双标签完全放进去，不能出现一半在里面一半在外边</p>
+    <h3>正确的示例-双标签包含单标签</h3>  
+    <div class="code-example">  
+        <pre><code>&lt;div&gt;换行
+&lt;br&gt; 换行           
+&lt;/div&gt;
+</code></pre>  
+        <button class="copy-btn">复制</button>  
+    </div>  
+
+    <h3>正确的示例-双标签包含双标签</h3>  
+    <div class="code-example">  
+        <pre><code>&lt;div&gt;
+&lt;b&gt;内容&lt;/b&gt;           
+&lt;/div&gt;
+</code></pre>  
+        <button class="copy-btn">复制</button>  
+    </div> 
+
+    
+    
+    <h3>错误的示例-单标签包含双标签</h3>  
+    <p>错误演示-br标签的右箭头里面包含另一个div</p>
+    <div class="code-example">  
+        <pre><code>&lt;br &lt;div&gt;地方&lt;/div&gt;   &gt;            
+</code></pre>  
+        <button class="copy-btn">复制</button>  
+    </div> 
+
+    <h3>错误的示例-双标签包含双标签</h3>
+    <p>
+        错误咬合 分不清是div中包含b标签还是b中包含div标签，必须要有明确的嵌套关系
+    </p>  
+    <div class="code-example">  
+        <pre><code>&lt;div&gt;
+&lt;b&gt;内容          
+&lt;/div&gt;
+&lt;/b&gt;
+</code></pre>  
+        <button class="copy-btn">复制</button>  
+    </div> 
+
+
+
+      <p>TIP:</p>
+    
+</div>  
+
+<!-- 3 大类-->
+            <div class="lesson-page" data-page="3">  
+                <h2>HTML标签作用分类</h2> 
+                <p>HTML标签有110个左右，按照其作用大的栏目分为样式类标签，布局类标签，插入资源类标签，交互类标签</p>
+                <h2>样式类标签</h2>
+                <p>样式类标签一般具有一定的样式，和纯文本有区别，要么是加粗了，要么是有划线要么是倾斜了，要么是有行距了</p>
+                <p>起源：在远古时代的网页中没有引入样式表概念，控制字体和样式只能靠标签去进行简单控制，
+                   甚至很多功能无法实现，现代网页通常采用普通文本标签+css样式去控制，
+                   或者有样式标签去除本来样式+css实现新功能，但是为了兼容现在还能看到远古字体样式标签</p> 
+
+                <div class="code-example">  
+                    <pre><code>&lt;strong&gt;我能加粗字体&lt;/strong&gt;
+</code></pre>  
+                    <button class="copy-btn">复制</button>  
+                </div> 
+
+                <h2>布局类标签</h2>
+                <p>布局类标签能起到划分区域板块,支撑整个页面，规划特定的图文声像在指定位置的标签，特别是能左右布局的标签。</p>  
+                <div class="code-example">  
+                    <pre><code>&lt;div&gt;我是一个布局标签&lt;/div&gt;
+</code></pre>  
+                    <button class="copy-btn">复制</button>  
+                </div> 
+                <h2>嵌入外部资源类标签</h2>
+                <p>网页的本质是一个文本文件，里面都是可以读懂的文字，它相当于总纲，它的文件性质决定它里面并不能放视频，声音，图片等文件，
+                    所以需要一个链接的语句，将这些资源汇总到一个界面上</p>  
+                    <div class="code-example">  
+                        <pre><code>&lt;img src="cat.png" &gt;
+</code></pre>  
+                        <button class="copy-btn">复制</button>  
+                    </div>
+
+                <h2>交互类标签</h2>
+                <p>网站往往都有很多页面(网页)组成，所以用户需要索取不同的页面，需要的内容，那么就需要和提供网页的机器（服务器）交互，
+                    告诉它我还想要哪些页面哪些内容哪些定制的东西</p>     
+                    <div class="code-example">  
+                        <pre><code>&lt;a href=&quot;http://www.baidu.com&quot; target=&quot;_blank&quot;&gt;我想要一个新页面&lt;/a&gt;
+</code></pre>  
+                        <button class="copy-btn">复制</button>  
+                    </div>    
+                
+                <p>TIP:标签总数会随着时间会有微调从html1到html2.0到html3.2到html4到html4.01到xhtml到html5，有的会新添加一些标签，有的是为了兼容保留的标签现在已经不常用的，
+                    所以会有“html5不支持”或者“html5不推荐使用”一说，也有“html5”新增标签，不过整体上标签比较稳定
+                </p>
+            </div> 
+
+<!-- 3-2样式类 -->
+<div class="lesson-page" data-page="3">  
+    <h2>HTML样式类标签</h2> 
+    <h3>标题类标签</h3>
+    <p>试一试下面的标签，看和普通文本有什么区别</p>
+    <div class="code-example">  
+        <pre><code>我是一个普通文字
+</code></pre>  
+        <button class="copy-btn">复制</button>  
+    </div>
+    <div class="code-example">  
+        <pre><code>&lt;h1&gt;我是一个人&lt;/h1&gt;
+</code></pre>  
+        <button class="copy-btn">复制</button>  
+    </div>  
+    <div class="code-example">  
+        <pre><code>&lt;h2&gt;我是一个人&lt;/h2&gt;
+</code></pre>  
+        <button class="copy-btn">复制</button>  
+    </div> 
+    <div class="code-example">  
+        <pre><code>&lt;h3&gt;我是一个人&lt;/h3&gt;
+</code></pre>  
+        <button class="copy-btn">复制</button>  
+    </div> 
+    <div class="code-example">  
+        <pre><code>&lt;h4&gt;我是一个人&lt;/h4&gt;
+</code></pre>  
+        <button class="copy-btn">复制</button>  
+    </div> 
+    <div class="code-example">  
+        <pre><code>&lt;h5&gt;我是一个标签&lt;/h5&gt;
+</code></pre>  
+        <button class="copy-btn">复制</button>  
+    </div> 
+    <div class="code-example">  
+        <pre><code>&lt;h6&gt;我是一个标签&lt;/h6&gt;
+</code></pre>  
+        <button class="copy-btn">复制</button>  
+    </div> 
+    <h3>标题类标签</h3>  
+    <p>TIP:标题类标签都具有加粗功能，大小不相同，行间都有间距</p>
+</div> 
+<!-- 4 -->
+            <div class="lesson-page" data-page="4">  
+                <h2>HTML样式标签</h2> 
+                <p>文本样式类标签不常用，简单了解，其加粗，划线，倾斜，大小，颜色，上下标均可以通过css实现</p> 
+                <div class="code-example">  
+                    <pre><code>
+&lt;p&gt;我是一个段落标签&lt;/p&gt;
+&lt;br&gt;我是一个换行标签
+&lt;b&gt;我是一个加粗标签&lt;/b&gt;
+&lt;u&gt;我是下划线&lt;/u&gt;
+&lt;s&gt;我是删除线&lt;/s&gt;
+&lt;i&gt;我是斜体&lt;/i&gt;
+&lt;font color=&quot;#f00&quot; size=&quot;7&quot;&gt;样式文本&lt;/font&gt;
+&lt;em&gt;单位&lt;/em&gt;
+&lt;span&gt;普通&lt;/span&gt;
+&lt;sub&gt;我是下标&lt;/sub&gt;
+&lt;sup&gt;我是上标&lt;/sup&gt;
+&lt;code&gt;代码&lt;/code&gt;
+&lt;pre&gt;保 留 
+格式&lt;/pre&gt;
+&lt;big&gt;大一号&lt;/big&gt;
+&lt;small&gt;小一号&lt;/small&gt;
+&lt;bdo dir=&quot;rtl&quot;&gt;方向反向阅读的国家使用&lt;/bdo&gt;
+&lt;bdo dir=&quot;lrt&quot;&gt;方向反向阅读的国家使用&lt;/bdo&gt;
+&lt;hr size=&quot;3&quot; width=&quot;300&quot;/&gt;
+
+
+&lt;em&gt;强调文本&lt;/em&gt;
+&lt;strong&gt;加粗文本&lt;/strong&gt;
+&lt;dfn&gt;定义项目&lt;/dfn&gt;
+&lt;code&gt;一段电脑代码 print(&quot;Hello World&quot;)&lt;/code&gt;
+&lt;samp&gt;计算机样本&lt;/samp&gt;
+&lt;kbd&gt;键盘输入&lt;/kbd&gt;
+&lt;var&gt;变量&lt;/var&gt;
+</code></pre>  
+                    <button class="copy-btn">复制</button>  
+                </div>  
+                
+                <h3>文本样式标签</h3>  
+                <p>TIP：这些带有样式的标签可以通过普通标签+CSS样式模拟，所以无需记忆，一般需要语义性的时候才用</p>
+            </div> 
+
+<!-- 5 -->
+
+
+<div class="lesson-page" data-page="5">  
+    <h2>HTML嵌入外部资源类标签</h2> 
+    <p>网页中插入外部资源，因为网页是文字性质的，本质上无法在网页文件中直接放图片，所以通过外部链接资源形式在网页中镶嵌图声相，
+        外部资源网页在一个物理空间可以用相对路径，绝对路径形式引入，也可以通过网址直接引用站点外的资源</p> 
+    <h3>嵌入图片</h3>
+        <div class="code-example">  
+        <pre><code>&lt;img src=&quot;cat.png&quot;/&gt;
+</code></pre>  
+        <button class="copy-btn">复制</button>  
+    </div> 
+<h3>嵌入视频</h3>
+    <div class="code-example">  
+        <pre><code>&lt;video src=&quot;shipin.mp4&quot; controls&gt;&lt;/video&gt;
+</code></pre>  
+        <button class="copy-btn">复制</button>  
+    </div> 
+    <h3>嵌入音频</h3>
+    <div class="code-example">  
+        <pre><code>&lt;audio src=&quot;yinpin.m4a&quot; controls&gt;&lt;/audio&gt;
+</code></pre>  
+        <button class="copy-btn">复制</button>  
+    </div> 
+    <h3>嵌入网页</h3>
+    <div class="code-example">  
+        <pre><code>&lt;iframe src=&quot;http://www.sina.com.cn&quot;&gt;&lt;/iframe&gt;
+</code></pre>  
+        <button class="copy-btn">复制</button>  
+    </div>
+    <h3>嵌入脚本</h3> 
+    <div class="code-example">  
+        <pre><code>&lt;script src=&quot;jiaoben.js&quot;&gt;&lt;/script&gt;
+</code></pre>  
+        <button class="copy-btn">复制</button>  
+    </div> 
+    <h3>嵌入样式</h3>
+    <div class="code-example">  
+        <pre><code>&lt;link href=&quot;yangshi.css&quot; rel=&quot;stylesheet&quot;/&gt;
+</code></pre>  
+        <button class="copy-btn">复制</button>  
+    </div> 
+    <h3>嵌入资源类标签</h3>  
+
+    <p>TIP：这些独立与网页的外部资源，为了便于引用，放在和本网页同一个文件夹中，不再引入相对路径，绝对路径和文件夹概念，简化处理，以便能只理解引入外部资源的概念</p>
+</div> 
+
+<!-- 6 -->
+<div class="lesson-page" data-page="5">  
+    <h2>HTML布局类标签</h2> 
+    <p>表格布局是最早的网页布局理念，因为其嵌套层数过多，已经逐渐被废弃，很少用于网页布局，只在一些列表类数据输出的场合下才能见到table布局<br/>
+        现代网页理念是用div+css布局，
+    </p> 
+    <h3>div布局</h3>
+   <p>行内样式</p>
+    <div class="code-example">  
+        <pre><code>&lt;div id=&quot;bx&quot; style="width: 200px; height: 200px; border:1px solid #f00;" &gt;需要样式标签支持&lt;/div&gt;
+&lt;div class=&quot;bz&quot; style="width: 200px; height: 200px; border: 1px solid #0f0;"&gt;划定一个区域&lt;/div&gt;
+</code></pre>  
+        <button class="copy-btn">复制</button>  
+    </div> 
+<h3>表格布局</h3>
+    <div class="code-example">  
+        <pre><code>&lt;table border=&quot;1&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; &gt;
+    &lt;tr&gt;&lt;td&gt;内容&lt;/td&gt;&lt;td&gt;内容&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;内容&lt;/td&gt;&lt;td&gt;内容&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>  
+        <button class="copy-btn">复制</button>  
+    </div> 
+    
+    <h3>布局类标签</h3>  
+
+    <p>TIP：几乎所有现代网站都是div+css布局</p>
+</div> 
+<!-- 6-2 -->
+<div class="lesson-page" data-page="5">  
+    <h2>HTML布局类标签</h2> 
+    <p>div+css布局，一般是要和css紧密结合的，因为只有div标签它是一个没有样式的标签。网页中3种样式引入方式
+    </p> 
+    <h3>div布局</h3>
+    <p>行内样式</p>
+    <div class="code-example">  
+        <pre><code>&lt;div id=&quot;bx&quot; style="width: 200px; height: 200px; border:1px solid #f00;" &gt;需要样式标签支持&lt;/div&gt;
+&lt;div class=&quot;bz&quot; style="width: 200px; height: 200px; border: 1px solid #0f0;"&gt;划定一个区域&lt;/div&gt;
+</code></pre>  
+        <button class="copy-btn">复制</button>  
+    </div> 
+    <p>头部样式用style标签</p>
+    <div class="code-example">  
+        <pre><code>&lt;style&gt;#bx{ width: 200px; height: 200px; border:1px solid #f00;}
+.bz{ width: 200px; height: 200px; border: 1px solid #0f0;}
+&lt;/style&gt;
+
+&lt;div id=&quot;bx&quot; &gt;需要样式标签支持&lt;/div&gt;
+&lt;div class=&quot;bz&quot; &gt;划定一个区域&lt;/div&gt;
+</code></pre>  
+        <button class="copy-btn">复制</button>  
+    </div> 
+    <p>外部样式用 link标签 现在有一个文件yangshi.css</p>
+    <div class="code-example">  
+        <pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;yangshi.css&quot;&gt;
+&lt;div id=&quot;bx&quot; &gt;需要样式标签支持&lt;/div&gt;
+&lt;div class=&quot;bz&quot; &gt;划定一个区域&lt;/div&gt;
+</code></pre>  
+        <button class="copy-btn">复制</button>  
+    </div> 
+
+    
+    <h3>布局类标签</h3>  
+
+    <p>TIP：几乎所有现代网站都是div+css布局</p>
+</div> 
+<!-- 6-3 -->
+<div class="lesson-page" data-page="5">  
+    <h2>HTML布局类标签-html5</h2> 
+    <p>html5 新增了布局类标签 header footer article  aside section main nav </p>
+    <p>以上标签只起布局栏目作用没有样式效果需要和css一起使用去划分页面，在以前div+CSS中只用div 和样式来分割布局。所有以下的标签都可以用 &lt;div class="quyu"&gt; &lt;/div&gt; 替代</p> 
+    <h3>header</h3>
+   <p>头部区域，注意和head标签区别，这个标签表示网页中导航和以上的部分 而head 在网页中不显示</p>
+    <div class="code-example">  
+        <pre><code>&lt;header&gt;头部区域&lt;/header&gt;
+</code></pre>  
+        <button class="copy-btn">复制</button>  
+    </div> 
+   <h3>main</h3>
+   <p>表示网页的中间区域 可以用&lt;div class="quyu"&gt; &lt;/div&gt; 替代</p>
+    <div class="code-example">  
+        <pre><code>&lt;main&gt; 中间区域 &lt;/main&gt;
+</code></pre>  
+        <button class="copy-btn">复制</button>  
+    </div> 
+    
+    <h3>footer</h3>  
+    <p>表示网页的底部区域一般的网站都是放导航和版权之类的地方 可以用&lt;div class="quyu"&gt; &lt;/div&gt; 替代</p>
+    <div class="code-example">  
+        <pre><code>&lt;footer&gt; 尾部区域 &lt;/footer&gt;
+</code></pre>  
+        <button class="copy-btn">复制</button>  
+    </div> 
+
+
+    <p>TIP：以上标签和div一起可以起到分割大区域的作用，然后在区域内布局</p>
+</div> 
+<!-- 6-4 -->
+<div class="lesson-page" data-page="5">  
+    <h2>HTML布局类标签</h2> 
+    <p>html5 新增了布局类标签 header footer article  aside section main nav </p>
+    <p>以上标签只起布局栏目作用没有样式效果，在以前div+CSS中只用div 和样式来分割布局。所有以下的标签都可以用 &lt;div class="quyu"&gt; &lt;/div&gt; 替代</p> 
+    <h3>aside</h3>  
+    <p>表示网页中间 侧栏导航或者侧栏部分 一般放在main中 可以用&lt;div class="quyu"&gt; &lt;/div&gt; 替代</p>
+    <div class="code-example">  
+        <pre><code>&lt;aside&gt; 侧栏 &lt;/aside&gt;
+</code></pre>  
+        <button class="copy-btn">复制</button>  
+    </div> 
+
+    <h3>section</h3>  
+    <p>表示节 网页主体中的一部分 一般放在main中 可以用&lt;div class="quyu"&gt; &lt;/div&gt; 替代</p>
+    <div class="code-example">  
+        <pre><code>&lt;section&gt; 章节 &lt;/section&gt;
+</code></pre>  
+        <button class="copy-btn">复制</button>  
+    </div>
+    
+    <h3>article</h3>  
+    <p>表示文章 一般放在main中 可以用&lt;div class="quyu"&gt; &lt;/div&gt; 替代</p>
+    <div class="code-example">  
+        <pre><code>&lt;article&gt; 文章 &lt;/article&gt;
+</code></pre>  
+        <button class="copy-btn">复制</button>  
+    </div>
+
+    <h3>nav</h3>  
+    <p>表示导航 可以用&lt;div class="quyu"&gt; &lt;/div&gt; 替代</p>
+    <div class="code-example">  
+        <pre><code>&lt;nav&gt; 导航 &lt;/nav&gt;
+</code></pre>  
+        <button class="copy-btn">复制</button>  
+    </div>
+
+    <p>TIP：以上标签和div一起可以起到分割大区域的作用，然后在区域内布局</p>
+</div> 
+<!-- 7 -->
+<div class="lesson-page" data-page="5">  
+    <h2>HTML布局类标签-列表类标签</h2> 
+    <p>重复内容呈现类，常和div构成现代列表类布局，比如导航，新闻标题列表，图文内容呈现，视频列表，音频列表</p> 
+    <h3>无序列表</h3>
+    
+        <div class="code-example">  
+        <pre><code>&lt;ul type=&quot;square&quot;&gt;
+    &lt;li&gt;列表&lt;/li&gt;
+    &lt;li&gt;列表&lt;/li&gt;
+    &lt;li&gt;列表&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>  
+        <button class="copy-btn">复制</button>  
+    </div> 
+<h3>有序列表</h3>
+    <div class="code-example">  
+        <pre><code>&lt;ol&gt;
+    &lt;li&gt;列表&lt;/li&gt;
+    &lt;li&gt;列表&lt;/li&gt;
+    &lt;li&gt;列表&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre>  
+        <button class="copy-btn">复制</button>  
+    </div> 
+<h3>定义列表</h3>
+<div class="code-example">  
+        <pre><code>&lt;dl&gt;
+    &lt;dt&gt;图片或者文本&lt;/dt&gt;
+    &lt;dd&gt;解释&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;dl&gt;
+    &lt;dt&gt;图片或者文本&lt;/dt&gt;
+    &lt;dd&gt;解释&lt;/dd&gt;
+&lt;/dl&gt;
+</code></pre>  
+        <button class="copy-btn">复制</button>  
+    </div>  
+    <h3>列表类标签</h3>  
+
+    <p>TIP：div>ul>li>a 是几乎所有网站导航栏的布局思路</p>
+</div> 
+
+<!-- 8 -->
+
+
+<div class="lesson-page" data-page="5">  
+    <h2>HTML服务器请求交互类标签</h2> 
+    <p>和服务器页面请求另一个网页 或者后端接口进行交互，返回有数据筛选的结果。</p> 
+    <p>包含a标签和form标签</p>
+    <h3>a标签</h3>
+    
+<div class="code-example">  
+        <pre><code>&lt;a href=&quot;http://www.baidu.com&quot;&gt;点击跳转&lt;/a&gt;
+</code></pre>  
+        <button class="copy-btn">复制</button>  
+    </div> 
+
+
+    <div class="code-example">  
+        <pre><code>&lt;a href=&quot;http://www.baidu.com&quot;&gt;图片超链接&lt;img src=&quot;cat.png&quot;/&gt;&lt;/a&gt; 
+</code></pre>  
+        <button class="copy-btn">复制</button>  
+    </div> 
+    <div class="code-example">  
+        <pre><code>&lt;a href=&quot;http://www.baidu.com&quot; target=&quot;_self&quot;&gt;本页面打开（默认）&lt;/a&gt;
+</code></pre>  
+        <button class="copy-btn">复制</button>  
+    </div> 
+    <div class="code-example">  
+        <pre><code>&lt;a href=&quot;http://www.baidu.com&quot; target=&quot;_blank&quot;&gt;向外跳转&lt;/a&gt;
+</code></pre>  
+        <button class="copy-btn">复制</button>  
+    </div> 
+
+    <div class="code-example">  
+        <pre><code>&lt;a href=&quot;http://www.baidu.com&quot;&gt;
+    &lt;video src=&quot;shipin.mp4&quot;&gt;&lt;/video&gt;
+&lt;/a&gt;
+</code></pre>  
+        <button class="copy-btn">复制</button>  
+    </div> 
+
+
+    <div class="code-example">  
+        <pre><code>&lt;a href=&quot;https://www.baidu.com/s?wd=1234&quot; target="_blank"&gt; 
+网址上携带数据的a标签
+&lt;/a&gt;
+</code></pre>  
+        <button class="copy-btn">复制</button>  
+    </div> 
+
+    <p>TIP：a标签里面可以包含 图文声像 表示点击他们就可以跳转</p>
+</div> 
+
+
+
+<!-- 9 -->
+
+
+<div class="lesson-page" data-page="5">  
+    <h2>HTML服务器请求交互类form标签</h2> 
+    
+    <h3>form标签表单类</h3>
+    <p>早期标签和服务器进行交互，完成BS数据交互的关键，
+        比如登录注册，新闻翻页，动态网站内容呈现，
+        是除了超链接以外的另一个携带数据跳转方式。<br>
+        因为其需要跳转，现代浏览器常见思路是通过输入或者点击+ajax请求数据，省略form标签。<br>
+    </p>
+    <h3>模拟百度提交</h3>    
+<div class="code-example">  
+        <pre><code>&lt;form action=&quot;https://www.baidu.com/s&quot; target=&quot;_blank&quot;&gt;
+            输入你的内容&lt;br&gt;
+             &lt;input name=&quot;wd&quot; type=&quot;text&quot;/&gt;&lt;br&gt;
+             &lt;input type=&quot;submit&quot; value=&quot;搜索&quot;/&gt;&lt;br&gt;
+            &lt;br&gt;
+&lt;/form&gt;
+</code></pre>  
+        <button class="copy-btn">复制</button>  
+    </div> 
+    <p>TIP：输入文本框中输入想搜索的内容</p>
+    <p>TIP：注意a和form的区别，a标签是请求一个页面，<br>
+        form标签是携带数据请求一个页面，<br>
+        虽然a也可以携带一些网址后面的参数数据，但是a通常被认为还是用于跳转页面，<br>
+        form被认为是大批量携带数据的方式，比如特定场合上传文件，携带敏感密码数据，用a标签无法实现</p>
+</div> 
+
+<!-- 10 -1-->
+<div class="lesson-page" data-page="5">  
+    <h2>HTML服务器请求交互类form标签</h2> 
+    <h3>form标签表单类</h3>
+    <p>input 中type值早期是2文2选择4按钮1文件1隐藏一共10种，html5添加了其他类别的输入框</p>
+    <h3>表单元素</h3>
+    <p>表单元素input  select textarea标签一般需要放入一个form中 （用ajax交互的可以不放入form中），演示过程中可能放在不同的form中，完整案例在最后</p>  
+<h3>form 框</h3>
+    <div class="code-example">  
+        <pre><code>&lt;form action=&quot;https://www.baidu.com/s&quot; target=&quot;_blank&quot;&gt;
+           表单元素一般放在此处 
+&lt;/form&gt;
+</code></pre>  
+        <button class="copy-btn">复制</button>  
+    </div> 
+<h3>单行文本框</h3>
+<p>和密码框，textarea是表单多行文本共同构成了文字性输入，因为是比较早期的表单元素界面不美观，常用css进行美化</p>
+    <div class="code-example">  
+        <pre><code>&lt;input name=&quot;wd&quot; type=&quot;text&quot;/&gt;
+</code></pre>  
+        <button class="copy-btn">复制</button>  
+    </div>
+<h3>密码框</h3>     
+    <div class="code-example">  
+        <pre><code>&lt;input type=&quot;password&quot; name=&quot;a&quot;/&gt;&lt;br&gt;
+</code></pre>  
+        <button class="copy-btn">复制</button>  
+    </div> 
+
+
+    <p>TIP：</p>
+</div> 
+<!-- 10-2 -->
+<div class="lesson-page" data-page="5">  
+    <h2>HTML服务器请求交互类form标签</h2> 
+<h3>input标签</h3>
+    
+<h3>单选</h3>
+<p>注意name相同 才能起到单选作用</p>
+<div class="code-example">  
+    <pre><code>1+1=?&lt;br&gt;
+A&lt;input type=&quot;radio&quot; name=&quot;b&quot;/&gt; 0 &lt;br&gt;
+B&lt;input type=&quot;radio&quot; name=&quot;b&quot;/&gt;1 &lt;br&gt;
+C&lt;input type=&quot;radio&quot; name=&quot;b&quot;/&gt;2 &lt;br&gt;
+D&lt;input type=&quot;radio&quot; name=&quot;b&quot;/&gt;3 &lt;br&gt;
+</code></pre>  
+    <button class="copy-btn">复制</button>  
+</div> 
+<h3>多选</h3>
+<div class="code-example">  
+    <pre><code>你喜欢哪些学科?&lt;br&gt;
+A&lt;input type=&quot;checkbox&quot; name=&quot;c&quot;/&gt;语文&lt;br&gt;
+B&lt;input type=&quot;checkbox&quot; name=&quot;c&quot;/&gt;数学&lt;br&gt;
+C&lt;input type=&quot;checkbox&quot; name=&quot;c&quot;/&gt;英语&lt;br&gt;
+D&lt;input type=&quot;checkbox&quot; name=&quot;c&quot;/&gt;物理&lt;br&gt;
+</code></pre>  
+    <button class="copy-btn">复制</button>  
+</div> 
+
+
+    <p>TIP：</p>
+</div> 
+
+
+<!-- 10-3 -->
+<div class="lesson-page" data-page="5">  
+    <h2>HTML服务器请求交互类form标签</h2> 
+
+<h3>4种按钮</h3>
+<p> type="button"普通按钮 </p>
+<p>type="submit" 提交表单跳转 放入form标签中且 form有action才能跳转</p> 
+<p>type="image" 图片提交按钮 提交表单跳转 放入form标签中且 form有action才能跳转</p>
+<p>type="reset"重置按钮 把输入清除干净 放入form标签中才能有清除效果</p>   
+  <h3>普通按钮</h3>    
+<div class="code-example">  
+    <pre><code>&lt;input type=&quot;button&quot; name=&quot;d&quot; value=&quot;hello&quot;/&gt;&lt;br&gt;
+</code></pre>  
+    <button class="copy-btn">复制</button>  
+</div> 
+
+
+<h3>重置按钮</h3>    
+<div class="code-example">  
+    <pre><code>&lt;input type=&quot;reset&quot; name=&quot;d&quot;/&gt;&lt;br&gt;
+</code></pre>  
+    <button class="copy-btn">复制</button>  
+</div> 
+
+<h3>图片提交按钮-也叫图片域</h3>    
+<div class="code-example">  
+    <pre><code>&lt;input type=&quot;image&quot; src="cat.png" name=&quot;d&quot;/&gt;&lt;br&gt;
+</code></pre>  
+    <button class="copy-btn">复制</button>  
+</div> 
+
+
+<h3>文本提交按钮</h3>    
+<div class="code-example">  
+    <pre><code>&lt;input type=&quot;submit&quot; name=&quot;d&quot; src=&quot;cat.png&quot;/&gt;&lt;br&gt;
+</code></pre>  
+    <button class="copy-btn">复制</button>  
+</div> 
+
+
+    <p>TIP：</p>
+</div> 
+
+
+
+
+<!-- 10-4 -->
+<div class="lesson-page" data-page="5">  
+    <h2>HTML服务器请求交互类form标签</h2> 
+<h3>文件域</h3>    
+<div class="code-example">  
+    <pre><code>&lt;input type=&quot;file&quot; name=&quot;f&quot;/&gt;&lt;br&gt;
+</code></pre>  
+    <button class="copy-btn">复制</button>  
+</div> 
+
+<h3>隐藏域</h3>
+<p>隐藏域，只用来传递数据，不进行界面交互，填写name和value属性 放入form中就可以随着form提交而传递一些值 </p>    
+<div class="code-example">  
+    <pre><code>&lt;input type=&quot;hidden&quot; name=&quot;g&quot; value=&quot;yincangshuju&quot;/&gt;
+</code></pre>  
+    <button class="copy-btn">复制</button>  
+</div>
+
+
+<h3>下拉列表</h3>
+<p>下拉选择框，因为其界面丑陋且很难用css美化
+现代网页常用ul+li列表进行改造然后通过ajax进行数据交互 </p>    
+<div class="code-example">  
+    <pre><code>&lt;select name=&quot;birth&quot;&gt;
+         &lt;option&gt;1998&lt;/option&gt;
+        &lt;option&gt;1999&lt;/option&gt;
+        &lt;option&gt;2000&lt;/option&gt;
+&lt;/select&gt;
+</code></pre>  
+    <button class="copy-btn">复制</button>  
+</div>
+
+
+    <p>TIP：</p>
+</div> 
+
+<!-- 10-4 -->
+<div class="lesson-page" data-page="5">  
+    <h2>HTML服务器请求交互类form标签</h2> 
+
+<h3>多行文本</h3>
+<p>多行文本,因为其界面不好看，现代网站商家，&lt;br&gt;常用自己制作的富文本编辑器替代textarea。
+    比如留言板，博客发布系统，新闻发布系统，&lt;br&gt;
+    状态发布器其均是自己公司制作的富文本编辑器。&lt;br&gt;
+    然后提交的时候通过js将数据追加到textarea中或者直接ajax提交。 </p>    
+<div class="code-example">  
+    <pre><code>&lt;textarea name=&quot;wen&quot; cols=&quot;20&quot; rows=&quot;10&quot;&gt;
+         内容
+&lt;/textarea&gt;
+</code></pre>  
+    <button class="copy-btn">复制</button>  
+</div>
+
+
+    <p>TIP：</p>
+</div> 
+
+
+<!-- 11 -->
+<div class="lesson-page" data-page="5">  
+    <h2>HTML服务器请求交互类form标签</h2> 
+    <p>完整案例</p>  
+<div class="code-example">  
+        <pre><code>&lt;form action=&quot;https://www.baidu.com/s&quot; target=&quot;_blank&quot;&gt;
+            2文本框：单行文本框:&lt;br&gt;
+            和textarea是表单多行文本框对应，因为是比较早期的表单，常用css进行美化&lt;br&gt;
+             &lt;input name=&quot;wd&quot; type=&quot;text&quot;/&gt;
+             &lt;br&gt;
+            提交按钮
+             &lt;input type=&quot;submit&quot; value=&quot;搜索&quot;/&gt;&lt;br&gt;
+            &lt;br&gt;
+            2文本框：密码框
+            &lt;input type=&quot;password&quot; name=&quot;a&quot;/&gt;&lt;br&gt;
+            &lt;hr&gt;
+            2选择按钮
+            &lt;br&gt;
+            &lt;input type=&quot;radio&quot; name=&quot;b&quot;/&gt; 
+            &lt;input type=&quot;radio&quot; name=&quot;b&quot;/&gt;&lt;br&gt;
+            &lt;hr&gt;
+            &lt;input type=&quot;checkbox&quot; name=&quot;c&quot;/&gt; 
+            &lt;input type=&quot;checkbox&quot; name=&quot;c&quot;/&gt;&lt;br&gt;
+            &lt;hr&gt;
+            4按钮&lt;br&gt;
+            普通按钮&lt;br&gt;
+            &lt;input type=&quot;button&quot; name=&quot;d&quot; value=&quot;hello&quot;/&gt;&lt;br&gt;
+            重置按钮&lt;br&gt;
+            &lt;input type=&quot;reset&quot; name=&quot;d&quot;/&gt;&lt;br&gt;
+            图片提交按钮&lt;br&gt;
+            &lt;input type=&quot;image&quot; src="cat.png" name=&quot;d&quot;/&gt;&lt;br&gt;
+            文本提交按钮&lt;br&gt;
+            &lt;input type=&quot;submit&quot; name=&quot;d&quot; src=&quot;cat.png&quot;/&gt;&lt;br&gt;
+            选择文件&lt;br&gt;
+            &lt;input type=&quot;file&quot; name=&quot;f&quot;/&gt;&lt;br&gt;
+            隐藏域，只用来传递数据，不进行界面交互&lt;br&gt;
+            &lt;input type=&quot;hidden&quot; name=&quot;g&quot; value=&quot;yincangshuju&quot;/&gt;&lt;br&gt;
+            &lt;hr&gt;
+            
+            下拉选择框，因为其界面丑陋且很难用css美化
+            现代网页常用ul+li列表进行改造然后通过ajax进行数据交互
+            &lt;br&gt;
+            &lt;select name=&quot;birth&quot;&gt;
+             &lt;option&gt;1998&lt;/option&gt;
+            &lt;option&gt;1999&lt;/option&gt;
+            &lt;option&gt;2000&lt;/option&gt;
+            &lt;/select&gt;
+            &lt;hr&gt;
+            多行文本,因为其界面不好看，现代网站商家，&lt;br&gt;常用自己制作的富文本编辑器替代textarea。
+            比如留言板，博客发布系统，新闻发布系统，&lt;br&gt;
+            状态发布器其均是自己公司制作的富文本编辑器。&lt;br&gt;
+            然后提交的时候通过js将数据追加到textarea中或者直接ajax提交。&lt;br&gt;
+            &lt;textarea name=&quot;wen&quot; cols=&quot;20&quot; rows=&quot;10&quot;&gt;
+             内容
+            &lt;/textarea&gt;
+&lt;/form&gt;
+</code></pre>  
+        <button class="copy-btn">复制</button>  
+    </div> 
+
+    <p>TIP：</p>
+</div> 
+
+
+
+
+
+<!-- 以上可以修改          -->
+            
+
+
+
+
+
+
+
+
+
+        
+        </div> 
+    </div>
+    
+    
+    <div id="content-area">  
+        <h2>代码编辑器</h2>  
+        <div class="editor-container">  
+            <div class="line-numbers">  
+                <!-- 1<br>2<br>3<br>4<br>5<br>6<br>7   -->
+            </div>  
+            <!-- <textarea id="code-editor" spellcheck="false"></textarea>  -->
+             <div class="cbox">
+            <div id="code-editor" contenteditable="true" spellcheck="false">
+                <div></div>
+            </div>  
+          </div>
+        </div>  
+    </div>  
+    
+    <div id="preview">  
+        <h2>预览效果</h2>  
+        <iframe id="preview-frame"></iframe>  
+    </div>  
+
+
+
+    <script>  
+        // 复制代码功能  
+        document.querySelectorAll('.copy-btn').forEach(btn => {  
+            btn.addEventListener('click', () => {  
+                const codeText = btn.previousElementSibling.textContent;  
+                navigator.clipboard.writeText(codeText);  
+                b
+                tn.textContent = '已复制';  
+                setTimeout(() => btn.textContent = '复制', 1000);  
+            });  
+        });  
+
+        // 实时预览功能  
+        const codeEditor = document.getElementById('code-editor');  
+        const previewFrame = document.getElementById('preview-frame');  
+
+        function updatePreview() {  
+           // previewFrame.srcdoc = codeEditor.value; 
+            //document.querySelector(".line-numbers").innerHTML=''
+            previewFrame.srcdoc = codeEditor.innerText;
+           // previewFrame.srcdoc = codeEditor.innerHTML;
+        }  
+
+        codeEditor.addEventListener('input', updatePreview);  
+
+
+        //切换页面功能
+
+        const prevPage = document.getElementById('prev-page');  
+        const nextPage = document.getElementById('next-page');  
+        console.log(prevPage,nextPage)
+        const arr=document.querySelectorAll("#lesson-navigation .lesson-page")
+        let len=arr.length
+        let cur=0;
+        showPage(cur)
+        prevPage.addEventListener("click",function(){
+            showPrev()
+        })
+        nextPage.addEventListener("click",function(){
+            showNext()
+        })
+
+        function showPage(page){
+            arr.forEach((v,i)=>{
+                v.style.display= i==cur? "block":"none"
+            })
+        }
+        function showNext(){
+            if(cur<len-1){
+                cur++
+            }
+            showPage(cur)
+            
+        }
+        function showPrev(){
+            if(cur>0){
+                cur--
+            }
+            showPage(cur)
+            
+        }
+    </script>  
+</body>  
+</html>  

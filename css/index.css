@@ -1,0 +1,184 @@
+body {  
+    display: flex;  
+    margin: 20px;  
+    font-family: 'Microsoft YaHei', Arial, sans-serif;  
+    height: calc(100vh - 40px);  
+    gap: 15px;  
+    overflow-y: auto;
+}  
+
+#left-sidebar, #content-area, #preview {  
+    width: 33.33%;  
+    border: 2px solid #e0e0e0;  
+    border-radius: 15px;  
+    padding: 15px;  
+    box-sizing: border-box;  
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);  
+    /* overflow-y: auto;   */
+}  
+
+#left-sidebar {  
+    background-color: #f9f9f9;  
+}  
+/* 上下分页部分 */
+#page-controls{
+  position: relative;
+}
+#page-controls button{
+    position: absolute;  
+    top: 5px;  
+    right: 5px;  
+    background-color: #4CAF50;  
+    color: white;  
+    border: none;  
+    padding: 5px 10px;  
+    cursor: pointer;  
+    font-size: 12px;  
+    border-radius: 5px; 
+}
+#page-controls button:first-of-type{ right:70px; }
+#page-controls button:active{ background-color: #ddd;}
+
+
+
+.lesson-content {  
+    line-height: 1.6;  
+    color: #333;  
+}  
+
+.code-example {  
+    background-color: #f4f4f4;  
+    border-left: 4px solid #4CAF50;  
+    padding: 10px;  
+    margin: 15px 0;  
+    font-family: 'Courier New', monospace;  
+    position: relative;  
+}  
+
+.copy-btn {  
+    position: absolute;  
+    top: 5px;  
+    right: 5px;  
+    background-color: #4CAF50;  
+    color: white;  
+    border: none;  
+    padding: 5px 10px;  
+    cursor: pointer;  
+    font-size: 12px;  
+    border-radius: 5px;  
+}  
+
+.tag-table {  
+    width: 100%;  
+    border-collapse: collapse;  
+    margin-top: 15px;  
+}  
+
+.tag-table th, .tag-table td {  
+    border: 1px solid #ddd;  
+    padding: 8px;  
+    text-align: left;  
+}  
+
+.tag-table th {  
+    background-color: #f2f2f2;  
+}  
+
+
+#content-area {  
+    background-color: #f8f8f8;  
+    display: flex;  
+    flex-direction: column;  
+    
+}  
+
+.editor-container {  
+    display: flex;  
+    position: relative;  
+   height: 100%;  
+   overflow-y: auto;
+   border: 1px solid #ddd; 
+}  
+
+.line-numbers {  
+    width: 40px;  
+    background-color: transparent;  
+    text-align: right;  
+    padding: 10px 5px;  
+    color: #888;  
+    border-right: 1px solid #ddd;  
+    word-wrap: break-word;
+}  
+.cbox{
+    flex-grow: 1;
+   
+    border: 1px solid #ddd;
+}
+.cbox:focus{
+    border: 1px solid #f00;
+}
+#code-editor {  
+    flex-grow: 1;  
+    background-color: white;  
+    font-family: 'Courier New', monospace;  
+    padding: 10px;  
+    box-sizing: border-box;
+    min-height:100%;
+    /* border: 1px solid #ddd;   */
+    /* resize:none; */
+    /* min-height: 300px;   */
+    /* min-height: 400px; */
+   
+    line-height: 1.5; 
+    counter-reset: line; 
+}  
+#code-editor>div{
+   position: relative;
+}
+#code-editor>div::before{
+    counter-increment: line;
+    content: counter(line) "  ";
+    position: absolute;
+    left:-43px;
+}
+[contenteditable]:focus {
+    outline: 2px none #eee; /* 2px宽的黑色实线 */
+}
+#code-editor:focus{
+    /* border:1px solid #f00 !important;  */
+}
+
+#preview {  
+    background-color: #fff;  
+}  
+
+#preview-frame {  
+    width: 100%;  
+    height: 100%;  
+    border: 1px solid #ddd;  
+    border-radius: 10px;  
+}  
+
+h2 {  
+    border-bottom: 2px solid #4CAF50;  
+    padding-bottom: 10px;  
+    margin-bottom: 15px;  
+}  
+
+
+.lesson-page table{
+    border: 1px solid #ddd; border-collapse: collapse; width: 100%;
+}
+.lesson-page table tr{
+    background-color: #f5f5f5;
+}
+.lesson-page table td ,.lesson-page table th{
+    border: 1px solid #ddd; padding: 8px;
+}
+
+#bx{ width: 200px;
+height: 200px;
+border:1px solid #f00;}
+.bz{ width: 200px;
+height: 200px;
+border: 1px solid #0f0;}
